@@ -5,13 +5,15 @@ const Table = ({ users }) => {
     <table class="table">
       <thead>
         <tr>
+          <th scope="col">title</th>
           <th scope="col">First</th>
           <th scope="col">Last</th>
         </tr>
       </thead>
       <tbody>
-        {users.map(({ name: { first, last } }) => (
+        {users.map(({ name: { first, last, title } }) => (
           <tr>
+            <td>{title}</td>
             <th>{first}</th>
             <td>{last}</td>
           </tr>
